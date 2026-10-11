@@ -46,22 +46,24 @@ FastAPI reads your BaseModel to automatically generate the interactive Swagger d
 ## Code Comparison: With vs. Without BaseModel
 Without BaseModel (Standard Python Class):
 
+```python
 class authusers:
 
     def __init__(self, name: str, email: str, password: str):
         self.name = name
         self.email = email
         self.password = password
+```
 
 * FastAPI won't know how to validate incoming JSON requests with this.# You would have to manually parse strings, check for missing fields, and return errors.
 
 With BaseModel (Pydantic Class):
-
+```python
 from pydantic import BaseModel
 
 class authusers(BaseModel):
     name: str
     email: str
     password: str
-
+```
 * FastAPI instantly knows how to read, validate, and document this incoming request body.
