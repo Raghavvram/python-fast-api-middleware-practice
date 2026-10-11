@@ -2,7 +2,6 @@ import logging
 
 from fastapi import FastAPI, HTTPException, status
 import psycopg
-from psycopg import sql
 from pydantic import BaseModel
 
 
