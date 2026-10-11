@@ -1,0 +1,25 @@
+[project]
+name = "backendautnetication"
+version = "0.1.0"
+description = "A a legacy way of implementing authentication"
+readme = "README.md"
+authors = [
+    { name = "RAGHAVVRAM JOHNSON", email = "raghavvram.johnson@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi[standard]>=0.143.0",
+    "logging>=0.4.9.6",
+    "posting>=2.11.1",
+    "psycopg[binary]>=3.3.6",
+    "pydantic>=2.14.0",
+    "ruff>=0.17.0",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[project.scripts]
+backendautnetication = "backendautnetication:main"
+
+[build-system]
+requires = ["uv_build>=0.12.23,<0.13.0"]
+build-backend = "uv_build"
